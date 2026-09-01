@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FCEのAI研修 | "使える"だけで終わらせない、AI活用人材の育成プログラム</title>
+<meta name="description" content="AIを"使える"人ではなく、業務に"組み込み・広げられる"人を育てる。FCEの実践型AI研修プログラム（AIスキル研修／伴走型研修／推進者養成研修）。" />
+<link rel="canonical" href="https://fce-aiservice.com/aitraining/" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" href="favicon.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="FCEのAI研修" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:title" content="FCEのAI研修 | “使える”だけで終わらせない、AI活用人材の育成プログラム" />
+<meta property="og:description" content="AIをただ“使える”人ではなく、業務に組み込み・広げられる人を育てる。FCEの実践型AI研修プログラム。" />
+<meta property="og:url" content="https://fce-aiservice.com/aitraining/" />
+<meta property="og:image" content="https://fce-aiservice.com/aitraining/hero-bg.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="FCEのAI研修" />
+<meta name="twitter:description" content="AIを“使える”だけで終わらせない、実践型AI研修プログラム。" />
+<meta name="twitter:image" content="https://fce-aiservice.com/aitraining/hero-bg.png" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"株式会社FCE","alternateName":"FCEのAI研修","url":"https://fce-aiservice.com/aitraining/","logo":"https://fce-aiservice.com/aitraining/fce-logo.png"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Course","name":"AIスキル研修","description":"AIの種類・リスク・活用法をハンズオン形式で体系的に習得し、AIエージェントを自分で作れる状態を目指す実践研修。","provider":{"@type":"Organization","name":"株式会社FCE","url":"https://fce-aiservice.com/aitraining/"},"url":"https://fce-aiservice.com/aitraining/#d01","hasCourseInstance":{"@type":"CourseInstance","courseMode":"onsite","courseWorkload":"PT15H"}},
+{"@type":"Course","name":"伴走型研修","description":"業務洗い出しワークを通じて、自社で活用できるAIエージェントを制作する伴走型研修。コンサルタントが現場の課題解決に伴走します。","provider":{"@type":"Organization","name":"株式会社FCE","url":"https://fce-aiservice.com/aitraining/"},"url":"https://fce-aiservice.com/aitraining/#d02","hasCourseInstance":{"@type":"CourseInstance","courseMode":"blended","courseWorkload":"PT16H"}},
+{"@type":"Course","name":"推進者養成研修","description":"リテラシー研修や伴走研修を自社で実施できる推進者（ファシリテーター）を養成し、社内へAI活用を展開する研修。","provider":{"@type":"Organization","name":"株式会社FCE","url":"https://fce-aiservice.com/aitraining/"},"url":"https://fce-aiservice.com/aitraining/#d03","hasCourseInstance":{"@type":"CourseInstance","courseMode":"blended","courseWorkload":"PT16H"}}
+]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&family=Dela+Gothic+One&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#15224b;
+    --navy-2:#1d2e63;
+    --grad-navy:linear-gradient(115deg,#0b1433 0%,#15224b 46%,#26437c 100%);
+    --red:#e02a23;
+    --orange:#f6921e;
+    --blue:#1f7fc4;
+    --violet:#6c5ce7;
+    --ink:#1a2238;
+    --muted:#5b6480;
+    --line:#e3e7f0;
+    --line-dk:rgba(255,255,255,.18);
+    --bg:#ffffff;
+    --bg-soft:#f5f7fc;
+    --maxw:1200px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--bg);
+    line-height:2;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:15px;
+  }
+  h1,h2,h3{font-family:"Zen Old Mincho",serif;line-height:1.5;letter-spacing:.03em;font-weight:900}
+  .os{font-family:"Oswald",sans-serif;letter-spacing:.06em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .nb{white-space:nowrap}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  /* ---------- BUTTONS ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:space-between;gap:18px;
+    font-weight:700;font-size:.95rem;padding:9px 9px 9px 30px;min-width:280px;
+    cursor:pointer;border:1px solid transparent;border-radius:999px;
+    transition:background .25s,color .25s,border-color .25s;
+    white-space:nowrap;letter-spacing:.06em;
+  }
+  .btn::after{
+    content:"→";width:42px;height:42px;border-radius:50%;flex:none;
+    display:grid;place-items:center;font-family:"Oswald",sans-serif;font-size:1.05rem;
+    transition:transform .25s;
+  }
+  .btn:hover::after{transform:translateX(5px)}
+  .btn-primary{background:var(--red);color:#fff}
+  .btn-primary::after{background:#fff;color:var(--red)}
+  .btn-primary:hover{background:#c31f19}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+  .btn-ghost::after{background:#fff;color:var(--navy)}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  .btn-dark{background:var(--navy);color:#fff}
+  .btn-dark::after{background:#fff;color:var(--navy)}
+  .btn-dark:hover{background:#0d1734}
+
+  /* ---------- HEADER ---------- */
+  header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--line)}
+  header .wrap{max-width:none;padding:0 32px}
+  .nav{display:flex;align-items:center;height:78px}
+  .nav .nav-links{margin-left:auto}
+  .nav .badges{display:flex;align-items:center;gap:12px;margin-left:20px;padding-left:20px;border-left:1px solid var(--line)}
+  .nav .badges img{height:46px;width:auto;display:block}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo .logo-img{height:40px;width:auto}
+  .logo b{font-family:"Zen Old Mincho",serif;font-size:1.24rem;color:var(--navy);letter-spacing:.08em;font-weight:900}
+  .nav-links{display:flex;align-items:center;gap:32px}
+  .nav-links a.lnk{font-weight:500;font-size:.88rem;color:var(--ink);padding:4px 0;position:relative}
+  .nav-links a.lnk::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--ink);transition:width .25s}
+  .nav-links a.lnk:hover::after{width:100%}
+  .nav-cta{min-width:0;padding:5px 5px 5px 22px;font-size:.84rem}
+  .nav-cta::after{width:34px;height:34px;font-size:.95rem}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+  .burger span{width:24px;height:2px;background:var(--navy);transition:.3s}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;color:#fff;overflow:hidden}
+  .hero-bg{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
+    animation:kb 16s ease-out both;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(100deg,rgba(15,26,58,.96) 0%,rgba(21,34,75,.88) 38%,rgba(30,64,140,.58) 72%,rgba(38,67,124,.38) 100%);
+  }
+  .hero-copy{padding:140px 40px 140px clamp(28px,6.5vw,130px);position:relative;z-index:2}
+  .hero-kicker{font-family:"Noto Sans JP",sans-serif;font-size:1.28rem;letter-spacing:.2em;color:rgba(255,255,255,.8);font-weight:700;margin-bottom:36px;animation:rise .8s .1s cubic-bezier(.2,.7,.2,1) both}
+  .hero h1{
+    font-family:"Noto Sans JP",sans-serif;font-weight:900;
+    font-size:clamp(2.2rem,4.6vw,4rem);color:#fff;letter-spacing:.02em;line-height:1.48;
+  }
+  .hero h1 .line{display:block;overflow:hidden;white-space:nowrap}
+  .hero h1 .line>span{display:inline-block;transform:translateY(110%);animation:lineup 1s cubic-bezier(.2,.75,.2,1) forwards}
+  .hero h1 .line:nth-child(1)>span{animation-delay:.25s}
+  .hero h1 .line:nth-child(2)>span{animation-delay:.4s}
+  .hero h1 .rd{color:#ff5049}
+  .hero p.lead{font-size:clamp(1.05rem,1.7vw,1.28rem);margin-top:34px;max-width:600px;color:rgba(255,255,255,.85);line-height:2.1;animation:rise .8s .6s cubic-bezier(.2,.7,.2,1) both}
+  .hero p.lead b{color:#fff}
+  .hero-cta{display:flex;gap:16px;margin-top:46px;flex-wrap:wrap;animation:rise .8s .78s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+  @keyframes lineup{to{transform:none}}
+  @keyframes kb{from{transform:scale(1.1)}to{transform:scale(1)}}
+  .hero .vtxt{
+    position:absolute;right:30px;top:56px;z-index:2;
+    writing-mode:vertical-rl;font-family:"Zen Old Mincho",serif;font-weight:700;
+    font-size:.95rem;letter-spacing:.42em;color:#fff;text-shadow:0 0 14px rgba(13,23,52,.5);
+    padding-top:6px;border-top:1px solid rgba(255,255,255,.7);
+  }
+
+  /* ---------- SECTION COMMON ---------- */
+  section.blk{padding:130px 0}
+  .sec-en{
+    display:block;font-family:"Oswald",sans-serif;font-weight:600;line-height:.9;
+    font-size:clamp(3.2rem,7.5vw,5.5rem);letter-spacing:.04em;
+    color:transparent;-webkit-text-stroke:1px #d4dae6;
+    margin-bottom:26px;user-select:none;
+  }
+  .dark .sec-en{-webkit-text-stroke:1px rgba(255,255,255,.22)}
+  .sec-ttl{font-size:clamp(1.6rem,3.2vw,2.3rem);color:var(--navy)}
+  .dark .sec-ttl{color:#fff}
+  .sec-lead{color:var(--muted);margin-top:22px;font-size:.98rem;max-width:640px}
+  .dark .sec-lead{color:rgba(255,255,255,.75)}
+  .rd{color:var(--red)}
+
+  /* ---------- ISSUE ---------- */
+  .issue-head{text-align:center;max-width:720px;margin:0 auto 64px}
+  .issue-head .sec-lead{margin-left:auto;margin-right:auto}
+  /* flowing worry cards */
+  .issue-flow{overflow:hidden;width:100%;background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .issue-flow .track{display:flex;gap:28px;width:max-content;padding:44px 14px;animation:iflowL 60s linear infinite}
+  .issue-flow:hover .track{animation-play-state:paused}
+  @keyframes iflowL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .icard{
+    width:370px;flex:none;background:#fff;border:1px solid var(--line);border-radius:18px;
+    box-shadow:0 14px 34px rgba(21,34,75,.08);padding:16px 30px 24px;
+    display:flex;flex-direction:column;white-space:normal;overflow:hidden;
+  }
+  .icard p{font-size:1.08rem;font-weight:700;color:var(--navy);line-height:1.85;min-height:5.55em}
+  .icard img{display:block;width:100%;height:190px;object-fit:contain;transform:scale(1.35);margin-top:6px}
+  .issue-close{
+    margin-top:90px;text-align:center;font-family:"Zen Old Mincho",serif;font-weight:900;
+    font-size:clamp(1.45rem,3.1vw,2.15rem);color:var(--navy);line-height:2;
+  }
+  .issue-close .u{border-bottom:2px solid var(--red);padding-bottom:2px}
+
+  /* ---------- CONCEPT ---------- */
+  .concept{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .steps{margin-top:80px;border-top:1px solid var(--ink)}
+  .steprow{
+    display:grid;grid-template-columns:200px 360px 1fr;gap:40px;align-items:start;
+    padding:52px 6px;border-bottom:1px solid var(--line);
+    position:relative;overflow:hidden;
+  }
+  .steprow>*{position:relative;z-index:1}
+  .steprow::after{
+    content:"";position:absolute;right:0;top:0;bottom:0;width:58%;z-index:0;
+    background-position:right center;background-size:cover;background-repeat:no-repeat;
+    opacity:.5;pointer-events:none;
+  }
+  .steprow:nth-child(1)::after{background-image:linear-gradient(90deg,rgba(245,247,252,1) 0%,rgba(245,247,252,1) 34%,rgba(245,247,252,.96) 58%,rgba(245,247,252,.6) 80%,rgba(245,247,252,.18) 100%),url('bg-01.png')}
+  .steprow:nth-child(2)::after{background-image:linear-gradient(90deg,rgba(245,247,252,1) 0%,rgba(245,247,252,1) 34%,rgba(245,247,252,.96) 58%,rgba(245,247,252,.6) 80%,rgba(245,247,252,.18) 100%),url('bg-02.png')}
+  .steprow:nth-child(3)::after{background-image:linear-gradient(90deg,rgba(245,247,252,1) 0%,rgba(245,247,252,1) 34%,rgba(245,247,252,.96) 58%,rgba(245,247,252,.6) 80%,rgba(245,247,252,.18) 100%),url('bg-03.png')}
+  .steprow p{max-width:520px}
+  .steprow .no{font-family:"Oswald",sans-serif;font-weight:600;font-size:3.4rem;line-height:1;color:transparent;-webkit-text-stroke:1.2px var(--navy)}
+  .steprow .no span{font-size:.72rem;letter-spacing:.3em;display:block;color:var(--muted);-webkit-text-stroke:0;font-weight:500;margin-bottom:10px}
+  .steprow h3{
+    font-family:"Noto Sans JP",sans-serif;font-weight:900;letter-spacing:.06em;
+    font-size:clamp(1.55rem,2.2vw,1.95rem);color:var(--navy);line-height:1.6;margin-top:-.18em;
+  }
+  .steprow h3 small{display:block;font-size:.55em;font-weight:700;color:var(--muted);margin-top:.35em;letter-spacing:.04em}
+  .steprow p{color:var(--muted);font-size:1.08rem;margin-top:.1em}
+  .concept-note{
+    margin-top:80px;font-family:"Zen Old Mincho",serif;font-weight:900;text-align:center;
+    font-size:clamp(1.15rem,2.4vw,1.55rem);color:var(--navy);
+  }
+  .concept-note .rd{border-bottom:2px solid var(--red);padding-bottom:2px;color:var(--red)}
+
+  /* ---------- STRENGTH (dark) ---------- */
+  .strength{background:var(--grad-navy);color:#fff;position:relative;overflow:hidden}
+  .strength .inner{display:grid;grid-template-columns:.95fr 1.05fr;gap:80px;align-items:start}
+  .habit{margin-top:64px}
+  .habit .stage{
+    display:flex;align-items:baseline;gap:26px;padding:26px 4px;border-bottom:1px solid var(--line-dk);
+  }
+  .habit .stage .lv{font-family:"Oswald",sans-serif;font-size:.72rem;letter-spacing:.3em;color:rgba(255,255,255,.45);min-width:88px;font-weight:400}
+  .habit .stage .tx{font-family:"Zen Old Mincho",serif;font-weight:900}
+  .habit .stage.s1 .tx{font-size:1.05rem;color:rgba(255,255,255,.45)}
+  .habit .stage.s2 .tx{font-size:1.3rem;color:rgba(255,255,255,.7)}
+  .habit .stage.s3{border-bottom:2px solid var(--red)}
+  .habit .stage.s3 .tx{font-size:clamp(1.5rem,2.8vw,2rem);color:#fff}
+  .habit .stage.s3 .tx em{font-style:normal;color:#ff5049}
+  .habit-note{margin-top:22px;font-size:.86rem;color:rgba(255,255,255,.6)}
+
+  /* ---------- REASON ---------- */
+  .reason-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 80px;margin-top:70px;border-top:1px solid var(--ink)}
+  .reason-item{padding:44px 6px 46px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:64px 1fr;gap:26px;align-items:start}
+  .reason-item .no{
+    width:48px;height:48px;background:var(--navy);color:#fff;display:grid;place-items:center;
+    font-family:"Oswald",sans-serif;font-weight:500;font-size:1.2rem;letter-spacing:.04em;
+    position:relative;
+  }
+  .reason-item .no::after{content:"";position:absolute;right:-5px;bottom:-5px;width:10px;height:10px;background:var(--red)}
+  .reason-item h3{font-size:1.42rem;color:var(--navy);font-family:"Noto Sans JP",sans-serif;font-weight:700;letter-spacing:.02em;line-height:1.5}
+  .reason-item p{color:var(--muted);font-size:1.04rem;margin-top:12px}
+
+  /* ---------- PROGRAMS ---------- */
+  .programs{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .prows{margin-top:80px;border-top:1px solid var(--ink)}
+  .prow{
+    display:grid;grid-template-columns:200px 1fr 300px;gap:50px;
+    padding:60px 6px;border-bottom:1px solid var(--line);align-items:start;
+  }
+  .prow .pnum .step{display:block;font-family:"Oswald",sans-serif;font-size:.72rem;letter-spacing:.3em;color:var(--muted);font-weight:500;margin-bottom:14px}
+  .prow .pnum .n{font-family:"Oswald",sans-serif;font-weight:600;font-size:4.6rem;line-height:1;color:transparent}
+  .prow.p01 .pnum .n{-webkit-text-stroke:1.4px var(--blue)}
+  .prow.p02 .pnum .n{-webkit-text-stroke:1.4px var(--violet)}
+  .prow.p03 .pnum .n{-webkit-text-stroke:1.4px var(--orange)}
+  .prow.p04 .pnum .n{-webkit-text-stroke:1.4px var(--red)}
+  .prow h3{font-size:clamp(1.5rem,2.6vw,1.9rem);color:var(--navy)}
+  .prow .cat{font-size:.82rem;color:var(--muted);margin-top:4px;letter-spacing:.06em}
+  .prow .pdesc{color:var(--ink);font-size:.95rem;margin-top:20px;max-width:560px}
+  .prow .pfor{margin-top:22px;display:flex;flex-direction:column;gap:2px}
+  .prow .pfor li{list-style:none;display:flex;gap:12px;align-items:baseline;font-size:.88rem;color:var(--muted)}
+  .prow .pfor li::before{content:"─";flex:none}
+  .prow.p01 .pfor li::before{color:var(--blue)}
+  .prow.p02 .pfor li::before{color:var(--violet)}
+  .prow.p03 .pfor li::before{color:var(--orange)}
+  .prow.p04 .pfor li::before{color:var(--red)}
+  .pside dl{border-top:1px solid var(--line)}
+  .pside .dr{display:flex;justify-content:space-between;gap-inline:16px;padding:13px 2px;border-bottom:1px solid var(--line);font-size:.88rem}
+  .pside dt{color:var(--muted);font-weight:400}
+  .pside dd{color:var(--navy);font-weight:700}
+  .pside .pnote{margin-top:16px;font-size:.8rem;color:var(--red);font-weight:700;line-height:1.8}
+  .pside .plink{
+    margin-top:22px;display:inline-flex;align-items:center;gap:12px;font-weight:700;font-size:.88rem;
+    color:var(--navy);border-bottom:1px solid var(--navy);padding-bottom:4px;transition:color .2s,border-color .2s;
+  }
+  .pside .plink::after{content:"→";font-family:"Oswald",sans-serif}
+  .pside .plink:hover{color:var(--red);border-color:var(--red)}
+
+  /* ---------- PRICE ---------- */
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:70px}
+  .price-state{font-family:"Zen Old Mincho",serif;font-weight:900;font-size:clamp(1.25rem,2.4vw,1.7rem);color:var(--navy);line-height:2}
+  .price-sub{margin-top:26px;color:var(--muted);font-size:.98rem;max-width:520px}
+
+  /* ---------- FLOW ---------- */
+  .flowsec{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .flow{display:grid;grid-template-columns:repeat(4,1fr);margin-top:80px;border-left:1px solid var(--line)}
+  .fstep{padding:8px 34px 12px;border-right:1px solid var(--line);position:relative}
+  .fstep .no{
+    width:44px;height:44px;background:var(--navy);color:#fff;display:grid;place-items:center;
+    font-family:"Oswald",sans-serif;font-weight:500;font-size:1.1rem;letter-spacing:.04em;position:relative;
+  }
+  .fstep .no::after{content:"";position:absolute;right:-5px;bottom:-5px;width:10px;height:10px;background:var(--red)}
+  .fstep h4{font-family:"Zen Old Mincho",serif;font-weight:900;font-size:1.45rem;color:var(--navy);margin-top:20px}
+  .fstep p{font-size:1.02rem;color:var(--muted);margin-top:12px}
+  .meet{margin-top:90px;display:grid;grid-template-columns:360px 1fr;gap:60px;align-items:start}
+  .meet h3{
+    font-family:"Noto Sans JP",sans-serif;font-weight:900;letter-spacing:.06em;
+    font-size:clamp(1.8rem,2.8vw,2.4rem);color:var(--navy);
+  }
+  .meet .m-sub{color:var(--muted);font-size:1.05rem;margin-top:18px}
+  .meet-list{border-top:1px solid var(--ink)}
+  .meet-item{padding:36px 6px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:baseline}
+  .meet-item .nm{font-weight:900;color:var(--navy);font-size:1.35rem;letter-spacing:.04em}
+  .meet-item .nm small{display:block;color:var(--red);font-size:.62em;font-weight:700;letter-spacing:.08em;margin-top:6px}
+  .meet-item p{color:var(--muted);font-size:1.05rem}
+
+  /* ---------- FAQ ---------- */
+  .faq-list{margin-top:70px;border-top:1px solid var(--ink)}
+  details.faq{border-bottom:1px solid var(--line)}
+  details.faq summary{
+    cursor:pointer;list-style:none;padding:28px 6px;font-weight:700;font-size:1.02rem;
+    display:flex;justify-content:space-between;align-items:center;gap:20px;transition:color .2s;
+  }
+  details.faq summary:hover{color:var(--red)}
+  details.faq summary::-webkit-details-marker{display:none}
+  details.faq summary .q{display:flex;gap:20px;align-items:baseline}
+  details.faq summary .q b{color:var(--red);font-family:"Oswald",sans-serif;font-weight:500}
+  details.faq summary .plus{flex:none;width:22px;height:22px;position:relative}
+  details.faq summary .plus::before,details.faq summary .plus::after{content:"";position:absolute;background:var(--ink);top:50%;left:50%;transform:translate(-50%,-50%)}
+  details.faq summary .plus::before{width:14px;height:1px}
+  details.faq summary .plus::after{width:1px;height:14px;transition:.3s}
+  details.faq[open] summary .plus::after{transform:translate(-50%,-50%) scaleY(0)}
+  details.faq .a{padding:0 6px 30px 44px;color:var(--muted);font-size:.92rem;max-width:760px}
+
+  /* ---------- CTA ---------- */
+  .cta{background:var(--grad-navy);color:#fff;position:relative;overflow:hidden}
+  .cta .inner{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+  .cta h2{font-size:clamp(1.7rem,3.4vw,2.5rem);color:#fff}
+  .cta p{margin-top:26px;color:rgba(255,255,255,.75);max-width:520px;font-size:.95rem}
+  .cta-btns{display:flex;flex-direction:column;gap:16px}
+  .cta-btns .btn{width:100%}
+  .cta .en-bg{
+    position:absolute;right:-20px;bottom:-30px;font-family:"Oswald",sans-serif;font-weight:600;
+    font-size:clamp(6rem,14vw,11rem);line-height:1;color:transparent;
+    -webkit-text-stroke:1px rgba(255,255,255,.08);user-select:none;pointer-events:none;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#0d1734;color:rgba(255,255,255,.7);padding:70px 0 32px}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.12)}
+  footer .logo b{color:#fff}
+  footer p.fd{font-size:.84rem;margin-top:20px;max-width:340px;line-height:2}
+  footer h5{color:rgba(255,255,255,.45);font-weight:500;font-size:.72rem;margin-bottom:18px;font-family:"Oswald",sans-serif;letter-spacing:.3em}
+  footer ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+  footer ul a{font-size:.86rem;transition:.2s}
+  footer ul a:hover{color:#fff}
+  .copy{text-align:center;font-size:.72rem;color:rgba(255,255,255,.4);padding-top:30px;font-family:"Oswald",sans-serif;letter-spacing:.22em;font-weight:400}
+
+  /* reveal */
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.25,.6,.25,1),transform .9s cubic-bezier(.25,.6,.25,1)}
+  .rv.in{opacity:1;transform:none}
+  /* scroll parallax targets */
+  .sec-en,.en-bg{will-change:transform}
+  /* row hover motion */
+  .steprow,.reason-item,.prow,.who-item,.meet-item{transition:background .35s,padding-left .35s}
+  .steprow:hover{padding-left:22px}
+  .prow:hover{background:#fff;padding-left:22px}
+  .reason-item:hover{background:var(--bg-soft);padding-left:14px}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:1240px){
+    .hero-copy{padding:100px 28px 90px}
+    .hero h1{font-size:clamp(1.8rem,3.9vw,2.9rem)}
+  }
+  @media(max-width:1040px){
+    .steprow{grid-template-columns:150px 1fr;gap:20px 30px}
+    .steprow p{grid-column:2}
+    .steprow::after{opacity:.22}
+    .prow{grid-template-columns:130px 1fr;gap:30px}
+    .prow .pside{grid-column:2}
+    .strength .inner{grid-template-columns:1fr;gap:40px}
+    .reason-grid{grid-template-columns:1fr;gap:0}
+    .price-grid{grid-template-columns:1fr;gap:60px}
+    .meet{grid-template-columns:1fr;gap:40px}
+    .flow{grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+    .fstep{padding:30px 34px}
+    .hero-copy{padding:90px 28px}
+    .cta .inner{grid-template-columns:1fr;gap:44px}
+  }
+  @media(max-width:720px){
+    .nav-links{
+      position:fixed;inset:78px 0 auto 0;background:#fff;flex-direction:column;
+      padding:24px 28px;gap:18px;border-bottom:1px solid var(--line);
+      transform:translateY(-140%);transition:.35s;align-items:stretch;
+    }
+    .nav-links.open{transform:none}
+    .nav-cta{justify-content:center}
+    .burger{display:flex;margin-left:auto}
+    .nav .badges{display:none}
+    .logo .logo-img{height:32px}
+    .logo b{font-size:1.05rem}
+    section.blk{padding:80px 0}
+    .hero-copy{padding:56px 28px 60px}
+    .hero .vtxt{display:none}
+    .hero h1 .line{white-space:normal}
+    .icard{width:290px;padding:22px 22px 18px}
+    .icard p{font-size:.98rem;min-height:6.4em}
+    .icard img{height:150px}
+    .issue-flow .track{gap:18px;padding:32px 9px}
+    .steprow{grid-template-columns:1fr;padding:34px 2px}
+    .steprow .no{font-size:2.6rem}
+    .prow{grid-template-columns:1fr;padding:44px 2px;gap:24px}
+    .prow .pside{grid-column:1}
+    .reason-item{grid-template-columns:52px 1fr}
+    .meet-item{grid-template-columns:1fr;gap:8px}
+    .flow{grid-template-columns:1fr;border-left:none;border-top:none}
+    .fstep{border-right:none;border-bottom:1px solid var(--line);padding:26px 2px}
+    .btn{min-width:0;width:100%}
+    .hero-cta .btn{width:100%}
+    .foot-grid{grid-template-columns:1fr;gap:34px}
+    .issue-close{margin-top:60px}
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo">
+      <img src="fce-logo.png" alt="FCE" class="logo-img">
+      <span><b>FCEのAI研修</b></span>
+    </a>
+    <div class="badges">
+      <img src="logo-jpx.png" alt="JPX 東証上場">
+      <img src="logo-bw.png" alt="Best Workplaces Japan 2026（Great Place To Work）">
+    </div>
+    <nav class="nav-links" id="navlinks">
+      <a class="lnk" href="#concept">育成の考え方</a>
+      <a class="lnk" href="#programs">研修一覧</a>
+      <a class="lnk" href="../elearning/">eラーニング</a>
+      <a class="btn btn-primary nav-cta" href="contact/">資料請求・お問い合わせ</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-bg" src="hero-bg.png" alt="">
+  <div class="vtxt">実践型AI研修プログラム</div>
+  <div class="hero-copy">
+    <p class="hero-kicker">「組織が動き出す」FCEのAI研修</p>
+    <h1>
+      <span class="line"><span>AIを、"使える"だけで</span></span>
+      <span class="line"><span><span class="rd">終わらせない。</span></span></span>
+    </h1>
+    <p class="lead">AI活用を、<b>全員が業務で使いこなす</b>へ。<br>FCEのAI研修は、AIをただ"使える"人ではなく、業務に"組み込み・広げられる"人を育てる、実践型の育成プログラムです。</p>
+    <div class="hero-cta">
+      <a href="contact/" class="btn btn-primary">資料請求・お問い合わせ</a>
+      <a href="#programs" class="btn btn-ghost">研修プログラムを見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ISSUE -->
+<section class="blk" id="issue">
+  <div class="wrap">
+    <div class="issue-head rv">
+      <h2 class="sec-ttl">こんなお悩み、ありませんか。</h2>
+      <p class="sec-lead">業種を問わず、社員のAI活用・人材育成を進めたい企業様から、<br>数名の少人数から全社規模まで抱える同じ課題。</p>
+    </div>
+  </div>
+  <div class="issue-flow" aria-label="よくあるお悩み">
+    <div class="track">
+      <!-- group 1 -->
+      <div class="icard"><p>人手不足の中で、生産性向上に課題を感じている</p>
+        <img src="issue-01.png" alt="" loading="lazy">
+      </div>
+      <div class="icard"><p>AIを導入したが、一部の社員しか使えておらず全社に広がらない</p>
+        <img src="issue-02.png" alt="" loading="lazy">
+      </div>
+      <div class="icard"><p>「触ってみた」で終わり、業務での成果や定着につながっていない</p>
+        <img src="issue-03.png" alt="" loading="lazy">
+      </div>
+      <div class="icard"><p>AI研修を受けさせたいが、何から始めればよいかわからない</p>
+        <img src="issue-04.png" alt="" loading="lazy">
+      </div>
+      <div class="icard"><p>将来的に社内で研修を内製化し、自走できる状態にしたい</p>
+        <img src="issue-05.png" alt="" loading="lazy">
+      </div>
+      <div class="icard"><p>経営層・DX推進担当として、自社のAI活用の現在地を知りたい</p>
+        <img src="issue-06.png" alt="" loading="lazy">
+      </div>
+      <!-- group 2 (loop copy) -->
+      <div class="icard"><p>人手不足の中で、生産性向上に課題を感じている</p>
+        <img src="issue-01.png" alt="" loading="lazy">
+      </div>
+      <div class="icard"><p>AIを導入したが、一部の社員しか使えておらず全社に広がらない</p>
+        <img src="issue-02.png" alt="" loading="lazy">
+      </div>
+      <div class="icard"><p>「触ってみた」で終わり、業務での成果や定着につながっていない</p>
+        <img src="issue-03.png" alt="" loading="lazy">
+      </div>
+      <div class="icard"><p>AI研修を受けさせたいが、何から始めればよいかわからない</p>
+        <img src="issue-04.png" alt="" loading="lazy">
+      </div>
+      <div class="icard"><p>将来的に社内で研修を内製化し、自走できる状態にしたい</p>
+        <img src="issue-05.png" alt="" loading="lazy">
+      </div>
+      <div class="icard"><p>経営層・DX推進担当として、自社のAI活用の現在地を知りたい</p>
+        <img src="issue-06.png" alt="" loading="lazy">
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="issue-close rv">その課題、ツールの導入ではなく<br><span class="u">「人を育てる」ことで解決</span>できます。</p>
+  </div>
+</section>
+
+<!-- CONCEPT -->
+<section class="blk concept" id="concept">
+  <div class="wrap">
+    <div class="rv">
+      <span class="sec-en">CONCEPT</span>
+      <h2 class="sec-ttl">"使える"で止めない。<br><span class="rd">"成果を出し、広げる"</span>まで育てる。</h2>
+      <p class="sec-lead">多くのAI研修は「触ってみた」で終わります。FCEは、業務に組み込み、社内へ広げられる人材まで、3つのステップで一気通貫に育成します。</p>
+    </div>
+    <div class="steps">
+      <div class="steprow rv">
+        <div class="no"><span>STEP</span>01</div>
+        <h3>発想を広げる<small>（AIリテラシーを高める）</small></h3>
+        <p>AIの種類・リスク・活用法を体系的に理解し、まず自分で使いこなせる状態をつくります。</p>
+      </div>
+      <div class="steprow rv">
+        <div class="no"><span>STEP</span>02</div>
+        <h3>業務に組み込む<br>成果を出す</h3>
+        <p>自社の業務課題を洗い出し、現場で使えるAIエージェントを制作。定型業務の工数削減・処理スピード向上など、実際の成果につなげます。</p>
+      </div>
+      <div class="steprow rv">
+        <div class="no"><span>STEP</span>03</div>
+        <h3>教える・広げる</h3>
+        <p>社内で研修を実施できる推進者（ファシリテーター）を養成。研修効果が一過性で終わらず、継続的に生産性向上が積み上がる状態へ。</p>
+      </div>
+    </div>
+    <p class="concept-note rv">だから、研修が終わっても<span class="rd">AI活用が社内に根づき、広がり続けます。</span></p>
+  </div>
+</section>
+
+<!-- STRENGTH -->
+<section class="blk strength dark" id="strength">
+  <div class="wrap">
+    <div class="inner">
+      <div class="rv">
+        <span class="sec-en">STRENGTH</span>
+        <h2 class="sec-ttl">「学んで終わり」に<br>しない、習慣化の設計。</h2>
+        <p class="sec-lead">多くの研修は「知っている・できる（意識）」で止まります。FCEは環境づくり・制度構築・フォロー体制まで含めて、「無意識にできる＝習慣」の状態を目指します。</p>
+      </div>
+      <div class="habit">
+        <div class="stage s1 rv"><span class="lv">STAGE 01</span><span class="tx">知っている</span></div>
+        <div class="stage s2 rv"><span class="lv">STAGE 02</span><span class="tx">できる（意識すれば）</span></div>
+        <div class="stage s3 rv"><span class="lv">STAGE 03</span><span class="tx">無意識にできる ＝ <em>習慣</em></span></div>
+        <p class="habit-note rv">── 一般的な研修はSTAGE 02まで。FCEはSTAGE 03までを設計します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REASON -->
+<section class="blk" id="reason">
+  <div class="wrap">
+    <div class="rv">
+      <span class="sec-en">REASON</span>
+      <h2 class="sec-ttl">FCEが選ばれる理由</h2>
+    </div>
+    <div class="reason-grid">
+      <div class="reason-item rv">
+        <span class="no">01</span>
+        <div><h3>一気通貫の伴走</h3><p>「使えるようになる」で終わらせず、業務への組み込み・社内展開まで一気通貫で伴走します。</p></div>
+      </div>
+      <div class="reason-item rv">
+        <span class="no">02</span>
+        <div><h3>実務起点のエージェント制作</h3><p>コンサルタントが伴走し、自社の業務課題を起点に、実務で使えるAIエージェントを一緒に制作します。</p></div>
+      </div>
+      <div class="reason-item rv">
+        <span class="no">03</span>
+        <div><h3>内製化・自走までの支援</h3><p>社内で研修を回せる推進者（ファシリテーター）を養成し、外部に頼らず自走できる状態まで支援します。</p></div>
+      </div>
+      <div class="reason-item rv">
+        <span class="no">04</span>
+        <div><h3>20年以上の育成実績</h3><p>教育・研修事業で数多くの企業の成長を支援。世界的ベストセラー『7つの習慣』の日本における出版企業でもあります。</p></div>
+      </div>
+      <div class="reason-item rv">
+        <span class="no">05</span>
+        <div><h3>習慣化の設計に強み</h3><p>環境づくり・制度構築・フォロー体制まで含めて設計し、学びを「定着」まで持っていきます。</p></div>
+      </div>
+      <div class="reason-item rv">
+        <span class="no">06</span>
+        <div><h3>柔軟な組み合わせ</h3><p>体験・スキル習得・伴走・推進者養成・eラーニングを、対象や目的に応じて柔軟に組み合わせられます。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="blk programs" id="programs">
+  <div class="wrap">
+    <div class="rv">
+      <span class="sec-en">PROGRAMS</span>
+      <h2 class="sec-ttl">目的に合わせて選べる、<br>研修プログラム</h2>
+      <p class="sec-lead">「まず使えるように」から「自社で広げる」まで。育成ステップに沿って、単体でも組み合わせでも導入いただけます。</p>
+    </div>
+    <div class="prows" id="lineup">
+      <!-- 01 -->
+      <article class="prow rv p01" id="d01">
+        <div class="pnum"><span class="step">STEP 01 ── <span class="nb">使えるようになる</span></span><span class="n">01</span></div>
+        <div class="pmain">
+          <h3>AIスキル研修</h3>
+          <p class="cat">ハンズオン形式の実践研修</p>
+          <p class="pdesc">AIで何ができるのか、どんなリスクがあるのか。基礎から活用までをハンズオンで体系的に習得し、AIエージェントを自分で作れる状態を目指します。</p>
+          <ul class="pfor">
+            <li>AIで何ができるか知りたい</li>
+            <li>リスク・セキュリティを理解したい</li>
+            <li>AIエージェントを作りたい</li>
+          </ul>
+        </div>
+        <div class="pside">
+          <dl>
+            <div class="dr"><dt>受講料</dt><dd>40万円 / 人</dd></div>
+            <div class="dr"><dt>研修時間</dt><dd>全15時間</dd></div>
+            <div class="dr"><dt>形式</dt><dd>対面実施 または オンライン実施</dd></div>
+          </dl>
+        </div>
+      </article>
+      <!-- 02 -->
+      <article class="prow rv p02" id="d02">
+        <div class="pnum"><span class="step">STEP 02 ── <span class="nb">業務に組み込む</span></span><span class="n">02</span></div>
+        <div class="pmain">
+          <h3>伴走型研修</h3>
+          <p class="cat">コンサルタントによる伴走支援</p>
+          <p class="pdesc">学びを「自社の成果」に変えるフェーズ。業務洗い出しワークを通じて現場の課題を起点に、実務で使えるAIエージェントを一緒に制作。発表共有し、ナレッジとして蓄積します。</p>
+          <ul class="pfor">
+            <li>自社の業務課題を見出したい</li>
+            <li>AIを活用して課題解決したい</li>
+          </ul>
+        </div>
+        <div class="pside">
+          <dl>
+            <div class="dr"><dt>研修時間</dt><dd>4時間 × 4か月</dd></div>
+            <div class="dr"><dt>形式</dt><dd>対面実施 または オンライン実施</dd></div>
+          </dl>
+        </div>
+      </article>
+      <!-- 03 -->
+      <article class="prow rv p03" id="d03">
+        <div class="pnum"><span class="step">STEP 03 ── <span class="nb">教える・広げる</span></span><span class="n">03</span></div>
+        <div class="pmain">
+          <h3>推進者養成研修</h3>
+          <p class="cat">内製化・自走支援</p>
+          <p class="pdesc">AI活用を「全社へ広げる」フェーズ。リテラシー研修や伴走研修を自社で実施できる推進者（ファシリテーター）を養成し、AI活用が組織に根づく状態をつくります。</p>
+          <ul class="pfor">
+            <li>多くの社員に研修を受けてほしい</li>
+            <li>コンテンツを使い、自社で研修を実施したい</li>
+            <li>社内で研修を内製化できる状態にしたい</li>
+          </ul>
+        </div>
+        <div class="pside">
+          <dl>
+            <div class="dr"><dt>研修時間</dt><dd>4時間 × 4か月</dd></div>
+            <div class="dr"><dt>形式</dt><dd>対面実施 または オンライン実施</dd></div>
+          </dl>
+        </div>
+      </article>
+      <!-- 04 -->
+      <article class="prow rv p04" id="d04">
+        <div class="pnum"><span class="step">SELF-PACED ── <span class="nb">個々で学ぶ</span></span><span class="n">04</span></div>
+        <div class="pmain">
+          <h3>eラーニング講座</h3>
+          <p class="cat">オンライン・全3編（入門・実践・発展）</p>
+          <p class="pdesc">まとまった研修時間が取りにくい方へ。個々人のペースで、入門・実践・発展の3編を体系的に学べます。全員が学べる環境を、いつでも・どこでも。</p>
+          <ul class="pfor">
+            <li>まとまった研修時間を取りにくい</li>
+            <li>全員が学べる環境をつくりたい</li>
+          </ul>
+        </div>
+        <div class="pside">
+          <dl>
+            <div class="dr"><dt>受講料</dt><dd>各編 135,000円（税別/1名）</dd></div>
+            <div class="dr"><dt>構成</dt><dd>全3編 ＝ 計30時間</dd></div>
+          </dl>
+          <a href="../elearning/" class="plink">eラーニング講座の詳細</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="blk" id="price">
+  <div class="wrap">
+    <div class="rv">
+      <span class="sec-en">PRICE</span>
+      <h2 class="sec-ttl">導入費用</h2>
+    </div>
+    <div class="price-grid">
+      <div class="rv">
+        <p class="price-state">目的・対象人数・活用範囲に応じて、<br>個社別にご提案します。</p>
+        <p class="price-sub">数名の少人数から全社規模まで、業種を問わず対応可能です。プログラムの組み合わせを含め、最適なプランをご提案しますので、まずはお問い合わせください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="blk flowsec" id="flow">
+  <div class="wrap">
+    <div class="rv">
+      <span class="sec-en">FLOW</span>
+      <h2 class="sec-ttl">導入までの流れ</h2>
+      <p class="sec-lead">お問い合わせから受講開始まで、専任担当がサポートします。初回のお打ち合わせは、Web面談・対面のどちらでも対応可能です。</p>
+    </div>
+    <div class="flow">
+      <div class="fstep rv"><div class="no">01</div><h4>お問い合わせ</h4><p>フォームよりご連絡ください。資料請求のみでも歓迎です。</p></div>
+      <div class="fstep rv"><div class="no">02</div><h4>ヒアリング</h4><p>課題・目的・対象人数をうかがい、最適なプランをご提案します。</p></div>
+      <div class="fstep rv"><div class="no">03</div><h4>お申し込み</h4><p>プログラムと日程を確定し、受講の準備を進めます。</p></div>
+      <div class="fstep rv"><div class="no">04</div><h4>研修スタート</h4><p>受講開始。研修後の活用・展開まで伴走します。</p></div>
+    </div>
+    <div class="meet">
+      <div class="rv">
+        <h3>まずはこちら</h3>
+        <p class="m-sub">導入を迷っている段階でも、お気軽にご利用いただけます。</p>
+      </div>
+      <div class="meet-list">
+        <div class="meet-item rv">
+          <div class="nm">個別相談会</div>
+          <p>各企業様ごとに、課題・目的・対象人数をヒアリングし、最適なプランをご提案します。</p>
+        </div>
+        <div class="meet-item rv">
+          <div class="nm">AI基礎勉強会<small>無料 ── 経営層・DX推進担当者様向け</small></div>
+          <p>AIの最新情報・活用方法・導入リスクを、貴社向けに個別設計してお伝えします。自社のAI活用の現在地を知りたい方に。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="blk" id="faq">
+  <div class="wrap">
+    <div class="rv">
+      <span class="sec-en">FAQ</span>
+      <h2 class="sec-ttl">よくあるご質問</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq rv"><summary><span class="q"><b>Q.</b>AIの知識がまったくない社員でも受講できますか？</span><span class="plus"></span></summary><div class="a">ご受講可能です。<br>AIスキル研修は生成AI活用に関して、基礎から体系的に学べる内容ですので、前提知識なしでもご参加いただけます。</div></details>
+      <details class="faq rv"><summary><span class="q"><b>Q.</b>複数の研修を組み合わせられますか？</span><span class="plus"></span></summary><div class="a">はい。「使う→組み込む→広げる」のステップに沿って組み合わせるのがおすすめです。<br>体験研修やeラーニングを含め、最適な構成をご提案します。</div></details>
+      <details class="faq rv"><summary><span class="q"><b>Q.</b>eラーニングと集合研修はどちらを選ぶべきですか？</span><span class="plus"></span></summary><div class="a">実務への落とし込みや内製化までを目指す場合は、集合・伴走型研修をご検討ください。<br>併用も可能です。</div></details>
+      <details class="faq rv"><summary><span class="q"><b>Q.</b>少人数でも導入できますか？</span><span class="plus"></span></summary><div class="a">はい。数名の少人数から全社規模まで、企業規模を問わず対応しています。</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="blk cta" id="contact">
+  <span class="en-bg">CONTACT</span>
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <h2 class="rv">まずは、自社に合うプランを<br>気軽にご相談ください。</h2>
+        <p class="rv">資料請求のみでも歓迎です。個別相談会・無料のAI基礎勉強会もご用意しています。</p>
+      </div>
+      <div class="cta-btns rv">
+        <a href="contact/" class="btn btn-primary">資料請求・お問い合わせ</a>
+        <a href="../elearning/" class="btn btn-ghost">eラーニング講座を見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" class="logo">
+          <img src="fce-logo-white.png" alt="FCE" class="logo-img">
+          <span><b>FCEのAI研修</b></span>
+        </a>
+        <p class="fd">AIを"使える"だけで終わらせない。業務に組み込み、広げられる人材を育てる実践型AI研修プログラム。</p>
+      </div>
+      <div>
+        <h5>PROGRAMS</h5>
+        <ul>
+          <li><a href="#d01">01 AIスキル研修</a></li>
+          <li><a href="#d02">02 伴走型研修</a></li>
+          <li><a href="#d03">03 推進者養成研修</a></li>
+          <li><a href="../elearning/">04 eラーニング講座</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>MENU</h5>
+        <ul>
+          <li><a href="#concept">育成の考え方</a></li>
+          <li><a href="#strength">FCEの強み</a></li>
+          <li><a href="#flow">導入の流れ</a></li>
+          <li><a href="contact/">資料請求・お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© FCE, Inc. ALL RIGHTS RESERVED.</div>
+  </div>
+</footer>
+
+<script>
+  // mobile nav
+  const burger=document.getElementById('burger');
+  const navlinks=document.getElementById('navlinks');
+  burger.addEventListener('click',()=>navlinks.classList.toggle('open'));
+  navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlinks.classList.remove('open')));
+  // scroll reveal (staggered)
+  const io=new IntersectionObserver((es)=>{
+    let d=0;
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.style.transitionDelay=(d*110)+'ms';d++;
+        e.target.classList.add('in');io.unobserve(e.target);
+      }
+    });
+  },{threshold:.1});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+  // parallax on outlined EN text
+  const pll=[...document.querySelectorAll('.sec-en,.en-bg')];
+  let ticking=false;
+  function parallax(){
+    const vh=window.innerHeight;
+    pll.forEach(el=>{
+      const r=el.getBoundingClientRect();
+      if(r.top<vh&&r.bottom>0){el.style.transform=`translateY(${(r.top-vh*.5)*.08}px)`}
+    });
+    ticking=false;
+  }
+  window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(parallax);ticking=true}},{passive:true});
+  parallax();
+</script>
+</body>
+</html>

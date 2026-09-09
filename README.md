@@ -18,8 +18,6 @@
 | /aitraining/                 | aitraining/index.html           | FCEのAI研修                       |
 | /aitraining/contact/         | aitraining/contact/index.html   | 資料請求・お問い合わせ            |
 | /elearning/                  | elearning/index.html            | eラーニング講座                   |
-| /aitraining/elearning.html   | （転送ページ）                  | 旧URL → /elearning/ へ転送        |
-| /aitraining/contact.html     | （転送ページ）                  | 旧URL → /aitraining/contact/ へ転送 |
 
 - ルート直下のその他のファイルは画像アセット（png / svg）、robots.txt、sitemap.xml です。
 - 各ディレクトリ（/aitraining/ /elearning/ など）へのアクセス時に `index.html` が返る設定（一般的なWebサーバーのデフォルト）を前提としています。

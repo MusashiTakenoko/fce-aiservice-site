@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="A person examines a three-bar chart through a red-rimmed magnifying glass">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#15224b" stroke-width="7">
+      <path d="M107 313h274M124 313V95"/>
+      <rect x="157" y="226" width="48" height="87" rx="5"/>
+      <rect x="238" y="166" width="48" height="147" rx="5"/>
+      <rect x="319" y="112" width="48" height="201" rx="5"/>
+      <circle cx="480" cy="159" r="34"/>
+      <path d="M429 267c4-48 21-73 51-73s47 25 51 73"/>
+      <path d="M440 222c-17 12-28 29-34 50M520 222c17 12 28 29 34 50"/>
+      <path d="M421 313h118"/>
+    </g>
+    <g stroke="#1f7fc4" stroke-width="7">
+      <path d="M174 244v51M255 184v111M336 130v165"/>
+      <path d="M145 118c52 14 104 2 148-25 26-16 51-23 78-18" stroke-dasharray="4 14" opacity=".75"/>
+    </g>
+    <g stroke="#e02a23" stroke-width="8">
+      <circle cx="330" cy="202" r="67"/>
+      <path d="m378 250 62 62"/>
+    </g>
+  </g>
+</svg>

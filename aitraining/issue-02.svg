@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="One person using AI at a computer while connected to surrounding coworkers">
+  <g fill="none" stroke="#c9d3e6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="135" cy="168" r="27"/>
+    <path d="M92 247c4-34 18-52 43-52s39 18 43 52M111 211l-20 30M159 211l20 30"/>
+    <circle cx="505" cy="168" r="27"/>
+    <path d="M462 247c4-34 18-52 43-52s39 18 43 52M481 211l-20 30M529 211l20 30"/>
+    <circle cx="112" cy="285" r="22"/>
+    <path d="M78 341c3-27 14-41 34-41s31 14 34 41"/>
+    <circle cx="528" cy="285" r="22"/>
+    <path d="M494 341c3-27 14-41 34-41s31 14 34 41"/>
+    <path d="M179 219C218 200 235 188 257 177M461 219c-39-19-56-31-78-42M147 290c44 4 69-3 93-18M493 290c-44 4-69-3-93-18" stroke-dasharray="4 15"/>
+  </g>
+  <g fill="none" stroke="#1f7fc4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="320" cy="159" r="37"/>
+    <path d="M260 265c5-48 25-70 60-70s55 22 60 70"/>
+    <path d="M269 224c-14 12-23 27-28 45M371 224c14 12 23 27 28 45"/>
+    <path d="M245 259h150l-15 63H260zM232 322h176"/>
+    <circle cx="320" cy="289" r="5" fill="#1f7fc4"/>
+    <path d="M320 103V76M294 110l-16-23M346 110l16-23M284 127l-26-8M356 127l26-8"/>
+    <circle cx="320" cy="68" r="8"/>
+    <circle cx="273" cy="82" r="8"/>
+    <circle cx="367" cy="82" r="8"/>
+    <circle cx="250" cy="116" r="8"/>
+    <circle cx="390" cy="116" r="8"/>
+  </g>
+</svg>

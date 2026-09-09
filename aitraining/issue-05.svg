@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="An instructor teaches an AI diagram, leading to a self-running team">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#15224b" stroke-width="7">
+      <rect x="102" y="69" width="214" height="145" rx="9"/>
+      <path d="M209 214v26M169 240h80"/>
+      <circle cx="172" cy="278" r="25"/>
+      <path d="M135 341c3-31 16-47 37-47s34 16 37 47"/>
+      <circle cx="245" cy="278" r="25"/>
+      <path d="M208 341c3-31 16-47 37-47s34 16 37 47"/>
+      <circle cx="347" cy="170" r="29"/>
+      <path d="M304 275c4-38 18-58 43-58s39 20 43 58M321 231l-29 40M372 230l23 37"/>
+      <path d="M322 217 286 170"/>
+    </g>
+    <g stroke="#1f7fc4" stroke-width="6">
+      <circle cx="208" cy="140" r="20"/>
+      <path d="M208 120V95M208 160v27M188 140h-28M228 140h28M194 126l-18-18M222 126l18-18M194 154l-18 18M222 154l18 18"/>
+      <circle cx="160" cy="95" r="7"/>
+      <circle cx="256" cy="95" r="7"/>
+      <circle cx="160" cy="187" r="7"/>
+      <circle cx="256" cy="187" r="7"/>
+    </g>
+    <g stroke="#c9d3e6" stroke-width="7">
+      <path d="M400 237h36" stroke-dasharray="4 14"/>
+      <path d="m421 223 15 14-15 14"/>
+    </g>
+    <g stroke="#1f7fc4" stroke-width="7">
+      <circle cx="466" cy="266" r="24"/>
+      <path d="M431 329c3-31 15-47 35-47s32 16 35 47"/>
+      <circle cx="525" cy="266" r="24"/>
+      <path d="M490 329c3-31 15-47 35-47s32 16 35 47"/>
+      <path d="M456 307c22 14 58 14 79 0"/>
+      <path d="M496 196v-21M479 203l-15-15M513 203l15-15M496 217v1"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="A person considering three unclear starting options beneath question marks">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#15224b" stroke-width="7">
+      <circle cx="320" cy="151" r="38"/>
+      <path d="M254 263c5-51 27-77 66-77s61 26 66 77"/>
+      <path d="M274 210c-22 8-35 24-42 47l25 7M366 210c22 8 35 24 42 47l-25 7"/>
+      <path d="M258 258c22 4 39 14 50 30M382 258c-22 4-39 14-50 30"/>
+      <path d="M308 288h24"/>
+    </g>
+    <g stroke="#e02a23" stroke-width="8">
+      <path d="M311 91c0-17 11-27 27-27 15 0 26 9 26 22 0 11-6 17-17 23-9 5-12 10-12 18"/>
+      <path d="M335 145v1"/>
+    </g>
+    <g stroke="#c9d3e6" stroke-width="7">
+      <path d="M231 105c0-11 7-18 18-18 10 0 17 6 17 15 0 7-4 11-11 15-6 3-8 7-8 12M247 145v1"/>
+      <path d="M397 111c0-11 7-18 18-18 10 0 17 6 17 15 0 7-4 11-11 15-6 3-8 7-8 12M413 151v1"/>
+      <path d="M320 301v15M320 316H157M320 316h163" stroke-dasharray="4 14"/>
+      <rect x="102" y="316" width="110" height="42" rx="10"/>
+      <rect x="265" y="316" width="110" height="42" rx="10"/>
+      <rect x="428" y="316" width="110" height="42" rx="10"/>
+    </g>
+  </g>
+</svg>

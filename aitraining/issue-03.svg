@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="A person starts an AI chat journey, but the path breaks before the goal flag">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#15224b" stroke-width="7">
+      <circle cx="147" cy="211" r="31"/>
+      <path d="M101 302c4-42 19-63 46-63s42 21 46 63M117 260l-23 34M177 260l23 34"/>
+      <path d="M195 311c44-12 75-24 99-44 18-15 29-35 39-56"/>
+      <path d="M493 220v-99M493 128h53l-15 22 15 22h-53"/>
+    </g>
+    <g stroke="#1f7fc4" stroke-width="7">
+      <path d="M104 95h122c13 0 23 10 23 23v42c0 13-10 23-23 23h-61l-25 21 4-21h-40c-13 0-23-10-23-23v-42c0-13 10-23 23-23z"/>
+      <path d="M117 139h15M154 139h15M191 139h15"/>
+      <path d="M105 74v-15M88 81 77 70M122 81l11-11"/>
+    </g>
+    <path d="M384 206c37-6 68-2 109 14" stroke="#c9d3e6" stroke-width="7" stroke-dasharray="5 16"/>
+    <g stroke="#e02a23" stroke-width="8">
+      <path d="M354 190v72"/>
+      <path d="m330 240 24 24 24-24"/>
+    </g>
+  </g>
+</svg>

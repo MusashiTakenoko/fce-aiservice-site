@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Person working at a laptop beside paperwork, a clock, and a rising arrow">
+  <g fill="none" stroke="#c9d3e6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M465 275V205h32v-42h32v-43" opacity=".75"/>
+    <path d="m516 133 13-13 13 13" opacity=".75"/>
+  </g>
+  <g fill="none" stroke="#15224b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="330" cy="136" r="39"/>
+    <path d="M270 249c6-50 27-75 60-75s54 25 60 75"/>
+    <path d="M278 203c-16 12-27 28-34 50M382 203c16 12 27 28 34 50"/>
+    <path d="M250 247h160l-16 68H266z"/>
+    <path d="M236 315h188"/>
+    <circle cx="330" cy="280" r="5" fill="#1f7fc4" stroke="#1f7fc4"/>
+    <path d="M111 293h96v22h-96zM121 261h96v32h-96zM108 231h96v30h-96z"/>
+    <path d="M126 245h31M139 276h39M126 305h34" stroke="#1f7fc4"/>
+    <circle cx="488" cy="105" r="42"/>
+    <path d="M488 79v28l18 12"/>
+  </g>
+</svg>
